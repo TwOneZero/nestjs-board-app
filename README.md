@@ -48,7 +48,7 @@
 
 <예시>
 
-![Untitled](images\Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/74637926/212827659-c183020a-f8c7-404b-975b-95e55f0b71f7.png)
 
 # 3. Provider, Service 란?
 
@@ -66,13 +66,13 @@
 
 → 컨트롤러에서 데이터 유효성 체크, DB 아이템 생성 등의 작업 처리
 
-![Untitled](images\Untitled1.png)
+![Untitled](https://user-images.githubusercontent.com/74637926/212827643-63122dd4-0d68-4901-89f7-8fa733f1a2b9.png)
 
 → Dependency injection
 
 # 4. Service 만들고 주입하기
 
-![Untitled](images\Untitled2.png)
+![Untitled](https://user-images.githubusercontent.com/74637926/212827647-ef30c0dc-fc48-4b30-aef4-8cdfc006e50b.png)
 
 → Constructor() 에서 타입스크립트의 private(접근제한자) 기능을 사용하여 해당 클래스안에서만 사용할 수 있게 할 수 있다.
 
@@ -153,13 +153,13 @@ export enum BoardStatus {
 
 - DTO 에 데코레이터를 통해 validation 을 정의하고 Pipe 를 핸들러에 삽입
 
-![Untitled](images\Untitled3.png)
+![Untitled](https://user-images.githubusercontent.com/74637926/212827651-f7bbc85f-e577-4e6b-abee-7f8ca908e0c8.png)
 
 # 8. Custom Pipe
 
 ### PipeTransform 인터페이스 구현
 
-![Untitled](images\Untitled4.png)
+![Untitled](https://user-images.githubusercontent.com/74637926/212827653-1a03197a-1bfd-4203-9e78-da68c562a327.png)
 
 - value : 처리가 된 인자의 값
 - metadata : 인자에 대한 메타데이터를 포함한 객체
