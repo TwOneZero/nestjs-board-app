@@ -28,5 +28,6 @@ module.exports = {
         tabWidth: 'auto',
       },
     ],
+    semi: [2, 'always'],
   },
 };
