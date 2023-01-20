@@ -10,6 +10,7 @@ import { Repository } from 'typeorm';
 import { AuthCredentialDto } from './dto/auth-credential.dto';
 import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt/dist/jwt.service';
+import { UserRepository } from 'src/repository/user.repository';
 
 export interface JwtPayload {
   username: string;
@@ -18,8 +19,7 @@ export interface JwtPayload {
 @Injectable()
 export class AuthService {
   constructor(
-    @Inject('USER_REPOSITORY')
-    private userRepository: Repository<User>,
+    private userRepository: UserRepository,
     private jwtService: JwtService,
   ) {}
 

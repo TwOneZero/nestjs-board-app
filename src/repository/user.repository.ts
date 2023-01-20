@@ -1,9 +1,6 @@
-import { DataSource } from 'typeorm';
+import { DataSource, Repository } from 'typeorm';
 import { User } from '../entities/user.entity';
-export const userRepository = [
-  {
-    provide: 'USER_REPOSITORY',
-    useFactory: (dataSource: DataSource) => dataSource.getRepository(User),
-    inject: ['DATA_SOURCE'],
-  },
-];
+import { CustomRepository } from './typeorm-ex.decorator';
+
+@CustomRepository(User)
+export class UserRepository extends Repository<User> {}

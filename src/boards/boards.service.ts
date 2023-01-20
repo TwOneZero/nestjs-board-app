@@ -5,14 +5,11 @@ import { CreateBoardDto } from './dto/create-board.dto';
 import { Board } from 'src/entities/board.entity';
 import { Repository } from 'typeorm';
 import { User } from 'src/entities/user.entity';
+import { BoardRepository } from 'src/repository/board.repository';
 
 @Injectable()
 export class BoardsService {
-  constructor(
-    @Inject('BOARD_REPOSITORY')
-    private boardRepository: Repository<Board>,
-  ) {}
-  d;
+  constructor(private boardRepository: BoardRepository) {}
   //모든 board 가져오기
   async getAllBoards(): Promise<Board[]> {
     const boards = await this.boardRepository.find();
@@ -21,15 +18,6 @@ export class BoardsService {
     }
     return boards;
   }
-
-  // //한 유저의 모든 boards 가져오기
-  // async getAUserBoards(user: User): Promise<Boar[]> {
-  //   const query = this.boardRepository.createQueryBuilder('board');
-  //   query.where('board.userId = :userId', { userId: user.id });
-
-  //   const boards = await query.getMany();
-  //   return boards;
-  // }
 
   //ID 를 통해 board 가져오기
   async getBoardById(id: number, user: User): Promise<Board> {
